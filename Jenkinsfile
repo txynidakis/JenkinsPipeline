@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
           steps {
             echo 'Testing the Build'
+            echo '"Get the driver path ${ChroneDriverPath}"'
           }
         }
 
@@ -24,5 +25,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    ChroneDriverPath = '/opt/chrome'
   }
 }
